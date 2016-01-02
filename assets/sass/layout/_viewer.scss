@@ -120,7 +120,7 @@
 
 			.caption {
 				@include vendor('background-image', (
-					'linear-gradient(bottom, rgba(16,16,16,0.75), rgba(16,16,16,0.25) 80%, rgba(16,16,16,0))',
+					'linear-gradient(bottom, rgba(16,16,16,0.85), rgba(16,16,16,0.35) 80%, rgba(16,16,16,0))',
 				));
 				@include padding(2em, 2em);
 				position: absolute;
