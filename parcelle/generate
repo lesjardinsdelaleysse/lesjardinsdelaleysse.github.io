@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#~ for i in {1..35}
+#~ do
+   #~ hash=`cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 32 | head -n 1`
+   #~ cp parcelle/index.html parcelle/$hash.html
+#~ done
+
+
+for file in $(ls -1 parcelle/*.html)
+do
+    hash=`echo $file | cut -d '/' -f 2 | cut -d '.' -f 1`
+    echo $hash
+    qrencode -d 300 -s 10 -o parcelle/qrcode/$hash.png http://lesjardinsdelaleysse.fr/$file
+done
